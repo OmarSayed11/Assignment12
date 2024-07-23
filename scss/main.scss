@@ -1,0 +1,61 @@
+// main.scss
+@import "./colors";
+@import "./fonts";
+@import "./margin";
+@import "./padding";
+@import "./widths";
+@import "./heights";
+@import "./mixins";
+
+// Use the variables in your styles
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color;
+  font-size: $font-large;
+  margin-bottom: $margin-medium;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color, 0.3s);
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: $padding-medium;
+  margin: $margin-small;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.card {
+  width: $width-medium;
+  padding: $padding-large;
+  margin: $margin-medium;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
